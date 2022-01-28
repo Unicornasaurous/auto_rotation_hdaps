@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import sys, os, sh, threading, time
 from tablet_mode_detection import pipe_switch_output, listen_for_switch_state
 
