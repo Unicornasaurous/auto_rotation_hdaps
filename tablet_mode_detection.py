@@ -7,7 +7,7 @@ tablet_mode = False
 #output indicating what state the tablet-laptop is in(tablet mode on or off). 
 #This process's output is piped into 'output.txt')
 def pipe_switch_output():
-    os.system(f"stdbuf -oL -eL libinput debug-events --device {input_device} > output.txt")
+    os.system(f"stdbuf -oL -eL libinput debug-events --device {input_device} > /tmp/output.txt")
     
     ##listen_for_switch_state() method:
 #continuously opens 'output.txt' to determine what state the laptop is in. 
@@ -19,7 +19,7 @@ def pipe_switch_output():
 def listen_for_switch_state():
     global tablet_mode
     while True:
-        with open('output.txt', 'rb') as f:
+        with open('/tmp/output.txt', 'rb') as f:
             try:
                 f.seek(-2, os.SEEK_END)
                 while f.read(1) != b'\n':
