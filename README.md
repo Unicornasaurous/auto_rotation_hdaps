@@ -20,4 +20,8 @@ google search of your device can determine whether it uses the HDAPS drivers); h
 6. If all seems to be working as it should, add `auto_rotate.py` to your desktop environment's autostart section, or add `auto_rotate.py &` to your `~/.xinitrc` file. This will ensure that auto rotation works upon startup. 
 7. Enjoy. 
 
+## Arch Linux
+
+If you're using arch, you can download the [PKGBUILD here](https://aur.archlinux.org/packages/auto-rotation-hdaps-git)
+
 
